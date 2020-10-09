@@ -3,14 +3,14 @@ package com.capgemini;
 public class Maximum {
 
 	public static void main(String[] args) {
-		Float a = (float) 10.23, b = (float) 20.324, c = (float) 30.324;
+		String a = "Apple", b = "Banana", c = "Peach";
 		Maximum max = new Maximum();
-		Float d = max.getMax(a, b, c);
+		String d = max.getMax(a, b, c);
 		System.out.println(d);
 	}
 	
-	public Float getMax(Float a, Float b, Float c) {
-		Float d;
+	public String getMax(String a, String b, String c) {
+		String d;
 		if (a.compareTo(b) > 0) {
 			if (a.compareTo(c) > 0) {
 				d=a;
