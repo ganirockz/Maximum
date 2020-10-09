@@ -3,15 +3,20 @@ package com.capgemini;
 public class Maximum {
 
 	public static void main(String[] args) {
-		String a = "Apple", b = "Banana", c = "Peach";
+		String a1 = "Apple", b1 = "Banana", c1 = "Peach";
+		Integer a2= 10,b2=20,c2=30;
+		Float a3 =(float)10.23,b3=(float)20.23,c3=(float)30.23;
 		Maximum max = new Maximum();
-		String d = max.getMax(a, b, c);
-		System.out.println(d);
+		String d1 = max.getMax(a1, b1, c1);
+		Integer d2 = max.getMax(a2, b2, c2);
+		Float d3 = max.getMax(a3, b3, c3);
+		System.out.println(d1+" "+d2+" "+d3);
+		
 	}
 	
-	public String getMax(String a, String b, String c) {
-		String d;
-		if (a.compareTo(b) > 0) {
+	public <E extends Comparable<E>> E getMax(E a, E b, E c) {
+		E d;
+		if (a.compareTo(b)>0) {
 			if (a.compareTo(c) > 0) {
 				d=a;
 			} else {
