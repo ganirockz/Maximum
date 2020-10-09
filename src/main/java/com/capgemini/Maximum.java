@@ -1,20 +1,24 @@
 package com.capgemini;
 
-public class Maximum {
-
+public class Maximum <E extends Comparable<E>>{
+	E x,y,z;
+	public Maximum(E x,E y,E z) {
+		this.x = x;
+		this.y = y;
+		this.z = z;
+	}
 	public static void main(String[] args) {
 		String a1 = "Apple", b1 = "Banana", c1 = "Peach";
 		Integer a2= 10,b2=20,c2=30;
 		Float a3 =(float)10.23,b3=(float)20.23,c3=(float)30.23;
-		Maximum max = new Maximum();
-		String d1 = max.getMax(a1, b1, c1);
-		Integer d2 = max.getMax(a2, b2, c2);
-		Float d3 = max.getMax(a3, b3, c3);
-		System.out.println(d1+" "+d2+" "+d3);
-		
+		new Maximum(a1,b1,c1).maximum();
+		new Maximum(a2,b2,c2).maximum();
+		new Maximum(a3,b3,c3).maximum();
 	}
-	
-	public <E extends Comparable<E>> E getMax(E a, E b, E c) {
+	public E maximum() {
+		return  Maximum.getMax(x,y,z);
+	}
+	public static <E extends Comparable<E>> E getMax(E a, E b, E c) {
 		E d;
 		if (a.compareTo(b)>0) {
 			if (a.compareTo(c) > 0) {
