@@ -33,7 +33,11 @@ public class Maximum <E extends Comparable<E>>{
 				d=c;
 			}
 		}
+		printMax(a,b,c,d);
 		return d;
+	}
+	public static <E> void printMax(E x,E y,E z,E max) {
+		System.out.printf("Max of %s,%s and %s is %s\n",x,y,z,max);
 	}
 
 }
